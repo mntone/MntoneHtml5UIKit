@@ -1,0 +1,59 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+@import "../mixins/basic.less";
+@import "../mixins/flex.less";
+
+input[type=radio] {
+	overflow: hidden;
+	position: absolute;
+	height: 0;
+	width: 0;
+
+	& + label {
+		display: inline-block;
+		position: relative;
+		.box-sizing(border-box);
+		min-height: 32px;
+		padding: 5px 0 3px 32em / 15em;
+		line-height: 20em / 15em;
+		.user-select(none);
+		cursor: default;
+
+		&::before, &::after {
+			content: "";
+			display: block;
+			position: absolute;
+			.box-sizing(border-box);
+			.background-clip(border-box);
+			top: 6px;
+			border-radius: 50%;
+		}
+
+		&::before {
+			height: 20em / 15em;
+			width: 20em / 15em;
+			margin: 0 8px 0 -28em / 15em;
+			border-width: 1px;
+			border-style: solid;
+		}
+
+		&::after {
+			display: none;
+			height: 10em / 15em;
+			width: 10em / 15em;
+			margin: 5em / 15em 8px 0 -23em / 15em;
+		}
+	}
+
+	&:checked + label {
+		&::after {
+			display: block;
+		}
+	}
+
+	.mk-keyboard &:focus + label::before {
+		outline-width: 1px;
+		outline-style: dotted;
+		outline-offset: 2px;
+	}
+}

@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Mntone HTML5 UIKit Testing Page</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<meta name="msapplication-tap-highlight" content="no">
+	<link rel="stylesheet/less" href="mnuik/less/uikit.less">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+	<style>
+		header, #content {
+			max-width: 500px;
+			margin: 20px auto;
+			padding: 0 20px;
+			-webkit-box-sizing: border;
+			-moz-box-sizing: border;
+			box-sizing: border-box;
+		}
+
+		@media (max-width: 640px) {
+			header, article {
+				width: 100%;
+			}
+		}
+
+		@media (max-width: 1200px) {
+			header, article {
+				width: 100%;
+			}
+		}
+	</style>
+	<script>
+
+		var data =
+		[
+			{ name: "Anchor", src: "anchor.html" },
+		];
+
+		var progress;
+		var timer;
+		function touchStartHandler() { }
+
+		function update()
+		{
+			if( progress )
+			{
+				var v = progress.value;
+				progress.value = v === 100 ? 0 : v + 1;
+			}
+		}
+
+		window.onload = function ()
+		{
+			document.addEventListener( "touchstart", touchStartHandler );
+
+			if( typeof document.msCSSOMElementFloatMetrics !== "undefined" )
+			{
+				document.msCSSOMElementFloatMetrics = true;
+			}
+
+			progress = document.getElementById( "sample-progress1" );
+			timer = setInterval( update, 200 );
+		};
+	</script>
+</head>
+<body>
+	<header>
+		<h1>mnuik</h1>
+	</header>
+
+	<!--
+		about Mntone HTML5 UIKit (MNKit)
+
+		Support browsers (in TypeScript section)
+		- Desktop (contains Android): IE10+, FF21+, SF6+, CH23+/OP15+, OP(Presto)12.10+
+		- Mobile: IE Mobile with WP8.1, Mobile Safari with iOS7+
+
+	-->
+
+	<div id="content">
+		<h2>Anchor</h2>
+		<a href="#">sample text</a>
+
+		<h3>A[disabled]</h3>
+		<a disabled>sample text</a>
+
+		<h2>Button</h2>
+		<button>content</button>
+
+		<h3>Button[disabled]</h3>
+		<button disabled>content</button>
+
+		<h3>Button[type=submit]</h3>
+		<button type="submit">content</button>
+
+		<h3>Input[type=button]</h3>
+		<input type="button" value="sample text">
+
+		<h3>Input[type=submit]</h3>
+		<input type="submit" value="sample text">
+
+		<h3>Input[type=reset]</h3>
+		<input type="reset" value="sample text">
+
+		<h3>Input[type=button][disabled]</h3>
+		<input type="button" value="sample text" disabled>
+
+
+		<h2>TextBox</h2>
+		<input type="text" value="sample text">
+
+		<h3>Input[type=password]</h3>
+		<input type="password" value="samplepassword">
+
+		<h3>Input[type=email]</h3>
+		<input type="email" value="sample@example.com">
+
+		<h3>Input[type=number]</h3>
+		<input type="number" value="120">
+
+		<h3>Input[type=tel]</h3>
+		<input type="tel" value="01-2345-6789">
+
+		<h3>Input[type=url]</h3>
+		<input type="url" value="http://sample.com/">
+
+		<h3>Input[type=search]</h3>
+		<input type="search" value="sample text">
+
+		<h3>TextArea</h3>
+		<textarea>sample text</textarea>
+
+
+		<h2>Checkbox</h2>
+		<input id="sample-check1" type="checkbox"><label for="sample-check1">sample text</label>
+
+		<h3>Checkbox[checked]</h3>
+		<input id="sample-check2" type="checkbox" checked><label for="sample-check2">sample text</label>
+
+		<h3>Checkbox[disable]</h3>
+		<input id="sample-check3" type="checkbox" disabled><label for="sample-check3">sample text</label>
+
+		<h3>Checkbox[checked][disable]</h3>
+		<input id="sample-check4" type="checkbox" checked disabled><label for="sample-check4">sample text</label>
+
+		<h3>Checkbox (contains long text)</h3>
+		<input id="sample-check5" type="checkbox"><label for="sample-check5">Checkbox has so long text. This text is sample text. This text is sample text. This text is sample text.</label>
+		<input id="sample-check6" type="checkbox"><label for="sample-check6">Checkbox has so long text. This text is sample text. This text is sample text. This text is sample text.</label>
+
+		<h3>Checkboxes</h3>
+		<input id="sample-check7" type="checkbox" checked><label for="sample-check7">sample text (1)</label>
+		<input id="sample-check8" type="checkbox"><label for="sample-check8">sample text (2)</label>
+		<input id="sample-check9" type="checkbox"><label for="sample-check9">sample text (3)</label>
+
+
+		<h2>Radio</h2>
+		<input id="sample-radio1" type="radio"><label for="sample-radio1">sample text</label>
+
+		<h3>Radio[checked]</h3>
+		<input id="sample-radio2" type="radio" checked><label for="sample-radio2">sample text</label>
+
+		<h3>Radio[disable]</h3>
+		<input id="sample-radio3" type="radio" disabled><label for="sample-radio3">sample text</label>
+
+		<h3>Radio[checked][disable]</h3>
+		<input id="sample-radio4" type="radio" checked disabled><label for="sample-radio4">sample text</label>
+
+		<h3>Radio (contains long text)</h3>
+		<input name="sample-radio-group1" id="sample-radio5" type="radio"><label for="sample-radio5">Radio has so long text. This text is sample text. This text is sample text. This text is sample text.</label>
+		<input name="sample-radio-group1" id="sample-radio6" type="radio"><label for="sample-radio6">Radio has so long text. This text is sample text. This text is sample text. This text is sample text.</label>
+
+		<h3>Radios</h3>
+		<input name="sample-radio-group2" id="sample-radio7" type="radio" checked><label for="sample-radio7">sample text (1)</label>
+		<input name="sample-radio-group2" id="sample-radio8" type="radio"><label for="sample-radio8">sample text (2)</label>
+		<input name="sample-radio-group2" id="sample-radio9" type="radio"><label for="sample-radio9">sample text (3)</label>
+
+
+		<h2>Select</h2>
+		<select>
+			<option>option A</option>
+			<option>option B</option>
+			<option>option C</option>
+			<option>option D</option>
+		</select>
+
+		<h3>Select[multiple]</h3>
+		<select multiple>
+			<option>option A</option>
+			<option>option B</option>
+			<option>option C</option>
+			<option>option D</option>
+		</select>
+
+
+		<h2>Progress</h2>
+		<progress></progress>
+
+		<h3>Progress[value=50][max=100]</h3>
+		<progress value="50" max="100"></progress>
+
+		<h3>Progress (with JavaScript)</h3>
+		<progress id="sample-progress1" value="0" max="100"></progress>
+	</div>
+</body>
+</html>

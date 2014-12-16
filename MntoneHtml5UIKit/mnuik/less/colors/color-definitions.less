@@ -1,0 +1,40 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+.color-definitions(@theme, @accent) {
+	.mixin(light) {
+		@base100: #000;
+		@alt100: #fff;
+		@chromeHigh: #ccc;
+		@chromeMedium: #e6e6e6;
+		@chromeLow: #f2f2f2;
+	}
+
+	.mixin(dark) {
+		@base100: #fff;
+		@alt100: #000;
+		@chromeHigh: #767676;
+		@chromeMedium: #1f1f1f;
+		@chromeLow: #171717;
+	}
+
+	.mixin(@theme);
+	
+	@accent100: @accent;
+	@accent80: fade(@accent100, 80%);
+	@accent60: fade(@accent100, 60%);
+	@accent40: fade(@accent100, 40%);
+	@accent20: fade(@accent100, 20%);
+
+	@base80: fade(@base100, 80%);
+	@base60: fade(@base100, 60%);
+	@base40: fade(@base100, 40%);
+	@base20: fade(@base100, 20%);
+	
+	@alt80: fade(@alt100, 80%);
+	@alt60: fade(@alt100, 60%);
+	@alt40: fade(@alt100, 40%);
+	@alt20: fade(@alt100, 20%);
+
+	@baseWhite: #fff;
+	@baseBlack: #000;
+}

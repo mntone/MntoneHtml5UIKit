@@ -1,0 +1,87 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+@import "../mixins/basic.less";
+
+/*
+
+	order
+	- float, clear
+	- content
+	- display, position
+	- .box-sizing, .background-clip
+	- left, top, height, width (contains min- and max-)
+	- outline, margin, border (-width, -style, -radius), padding
+		-top, -right, -bottom, -left
+	- .user-select
+
+*/
+
+@-ms-viewport {
+	width: device-width;
+}
+
+html {
+	.text-size-adjust(100%);
+	.user-select(none);
+	cursor: default;
+	-webkit-touch-callout: none;
+}
+
+body {
+	margin: 0;
+	-ms-content-zooming: none;
+}
+
+article {
+	.user-select(text);
+	cursor: auto;
+}
+
+a {
+	text-decoration: none;
+
+	&[disabled] {
+		cursor: default;
+	}
+}
+
+input, textarea {
+	border-radius: 0;
+}
+
+input, textarea, button, progress {
+	-webkit-appearance: none;
+	outline: 0;
+}
+
+select {
+	.box-sizing(border-box);
+	.background-clip(border-box);
+	min-height: 32px;
+	min-width: 100px;
+	margin: 0;
+	border-width: 1px;
+	border-style: solid;
+
+	&::-ms-value {
+		padding: 5px 12px 7px 12px;
+		margin: 0;
+	}
+
+	&::-ms-expand {
+		margin-right: 5px;
+		margin-left: 3px;
+		margin-bottom: -2px;
+		border: none;
+	}
+}
+
+	select[multiple] {
+		padding: 0 0 0 12px;
+	}
+
+@import "button.less";
+@import "checkbox.less";
+@import "radio.less";
+@import "progress.less";
+@import "textbox.less";

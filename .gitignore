@@ -1,0 +1,6 @@
+bin/
+obj/
+*.suo
+*.js
+*.js.map
+*.d.ts

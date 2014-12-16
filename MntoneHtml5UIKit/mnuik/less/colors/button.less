@@ -1,0 +1,44 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+@import "color-definitions.less";
+
+.button-colors(@theme, @accent) {
+	.color-definitions(@theme, @accent);
+
+	button,
+	button[type=submit],
+	input[type=button],
+	input[type=reset],
+	input[type=submit] {
+		color: @base100;
+		background-color: @base20;
+		border-color: transparent;
+
+		&:hover {
+			border-color: @base40;
+		}
+
+		&:active {
+			background-color: @base40;
+		}
+
+		&:disabled {
+			color: @base20;
+			background-color: @base20;
+			border-color: transparent;
+		}
+	}
+
+	button[type=submit],
+	input[type=submit] {
+		background-color: @accent60;
+
+		&:hover {
+			border-color: @accent100;
+		}
+
+		&:active {
+			background-color: @accent100;
+		}
+	}
+}

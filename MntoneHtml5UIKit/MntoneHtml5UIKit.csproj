@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{6E079FFA-94B6-43FC-89EC-45CEC555823C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.1</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="template.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mnuik\less\colors\color-definitions.less" />
+    <Content Include="mnuik\less\colors\basic.less" />
+    <Content Include="mnuik\less\fonts\font-definitions.less" />
+    <Content Include="mnuik\less\mixins\animation.less" />
+    <Content Include="mnuik\less\mixins\basic.less" />
+    <Content Include="mnuik\less\mixins\display.less" />
+    <Content Include="mnuik\less\styles\basic.less" />
+    <Content Include="mnuik\less\uikit-config.less" />
+    <Content Include="mnuik\less\uikit.less" />
+    <Content Include="mnuik\less\fonts\intrinsic.less" />
+    <Content Include="mnuik\less\styles\button.less" />
+    <Content Include="mnuik\less\styles\checkbox.less" />
+    <Content Include="mnuik\less\styles\radio.less" />
+    <Content Include="mnuik\less\colors\button.less" />
+    <Content Include="mnuik\less\colors\checkbox.less" />
+    <Content Include="mnuik\less\colors\radio.less" />
+    <Content Include="mnuik\less\colors\progress.less" />
+    <Content Include="mnuik\less\styles\progress.less" />
+    <Content Include="mnuik\less\styles\textbox.less" />
+    <Content Include="mnuik\less\colors\textblock.less" />
+    <Content Include="mnuik\less\mixins\flex.less" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="mnuik\ts\EventType.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Global.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Parser\TokenIterator.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Parser\StringIterator.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Parser\Lexer.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Parser\Parser.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Parser\TokenInfo.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Parser\TokenType.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\Command.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\Primitive\ControlListItemBase.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\Primitive\ControlListBase.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\Primitive\ControlProcessor.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\Primitive\ICommandBase.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\Primitive\ControlBase.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\Seg.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\Tab.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\SegItem.ts" />
+    <TypeScriptCompile Include="mnuik\ts\UI\TabItem.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Utilities.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MntoneHtml5UIKit</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>22769</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:22769/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
+    <TypeScriptOutFile>app.js</TypeScriptOutFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptOutFile>app.js</TypeScriptOutFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

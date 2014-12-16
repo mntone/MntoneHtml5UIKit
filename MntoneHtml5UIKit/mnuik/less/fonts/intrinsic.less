@@ -1,0 +1,74 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+@import "../uikit-config.less";
+@import "font-definitions.less";
+
+body {
+	font-weight: 300;
+	font-size: .938em;
+	line-height: 1.667;
+	letter-spacing: 0.02em;
+	vertical-align: baseline;
+}
+
+body, input, button, textarea, select, option {
+	font-family: "Segoe UI", "Segoe WP", "Helvetica Neue", "Roboto", "Hiragino Kaku Gothic ProN", "Meiryo UI", "Segoe UI Emoji", sans-serif;
+}
+
+a, nav {
+	font-weight: 400;
+}
+
+code, pre, samp {
+	font-family: Consolas, monospace;
+	font-size: 100%;
+	line-height: 1.333;
+}
+
+h1 {
+	font-weight: 200;
+	font-size: ( 42 / 11 ) * 100%; /* 42pt/12pt */
+	letter-spacing: 0;
+	line-height: 2.5;
+
+	@media (max-width: @cPhoneMaxWidth) {
+		font-size: ( 20 / 11 ) * 100%; /* 20pt/12pt */
+		letter-spacing: 0.01em;
+		line-height: 1.875;
+	}
+}
+
+h2 {
+	font-weight: 200;
+	font-size: ( 20 / 11 ) * 100%; /* 20pt/12pt */
+	letter-spacing: 0.01em;
+	line-height: 1.875;
+}
+
+h3, h4 {
+	font-weight: 600;
+	font-size: 100%;
+}
+
+h5, h6 {
+	font-weight: 400;
+	font-size: ( 9 / 11 ) * 100%; /* 20pt/12pt */
+}
+
+button, input, textarea {
+	font-weight: 400;
+	font-size: 100%;
+	line-height: 1.333;
+	vertical-align: top;
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+	font-weight: 700;
+}
+
+select {
+	font-size: 100%;
+}

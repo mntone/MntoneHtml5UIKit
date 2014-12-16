@@ -1,0 +1,24 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+@import "color-definitions.less";
+
+.progress-colors(@theme, @accent) {
+	.color-definitions(@theme, @accent);
+
+	progress {
+		color: @accent100;
+		background-color: @base20;
+
+		&::-webkit-progress-value {
+			background: @accent100;
+		}
+
+		&::-moz-progress-bar {
+			background-color: @accent100;
+		}
+
+		&::-webkit-progress-bar {
+			background-color: transparent;
+		}
+	}
+}

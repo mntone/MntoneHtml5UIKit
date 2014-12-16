@@ -1,0 +1,70 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+@import "../mixins/basic.less";
+
+@-webkit-keyframes mnuik-progress-indeterminate {
+	0% {
+		left: 0;
+		width: 25%;
+	}
+
+	50% {
+		left: calc(75%);
+		width: 25%;
+	}
+
+	75% {
+		left: calc(100%);
+		width: 0%;
+	}
+
+	75.1% {
+		left: 0;
+		width: 0%;
+	}
+
+	100% {
+		left: 0;
+		width: 25%;
+	}
+}
+
+@keyframes mnuik-progress-fade-out {
+	from {
+		opacity: 1.0;
+	}
+
+	to {
+		opacity: 0.5;
+	}
+}
+
+progress {
+	height: 4px;
+	width: 180px;
+	border-style: none;
+
+	&::-ms-fill {
+		border-style: none;
+	}
+
+	&.win-medium {
+		width: 296px;
+	}
+
+	&.win-large {
+		width: 100%;
+	}
+
+	&:indeterminate::-webkit-progress-value {
+		position: relative;
+		-webkit-animation: mnuik-progress-indeterminate 3s linear infinite;
+	}
+
+	&.win-paused:not(:indeterminate) {
+		animation-name: mnuik-progress-fade-out;
+		animation-duration: 3s;
+		animation-timing-function: cubic-bezier(0.03, 0.76, 0.31, 1.0);
+		opacity: 0.5;
+	}
+}

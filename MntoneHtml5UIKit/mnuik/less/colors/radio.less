@@ -1,0 +1,62 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+@import "color-definitions.less";
+
+.radio-colors(@theme, @accent) {
+	.color-definitions(@theme, @accent);
+
+	input[type=radio] {
+		& + label {
+			&::before {
+				border-color: @base80;
+				background-color: transparent;
+			}
+
+			&::after {
+				background-color: @base80;
+			}
+		}
+
+		& + label:hover {
+			&::before {
+				border-color: @base100;
+			}
+
+			&::after {
+				background-color: @base100;
+			}
+		}
+
+		&:checked + label {
+			&::before {
+				border-color: @accent100;
+			}
+		}
+
+		&:active + label {
+			&::before {
+				border-color: @base60;
+			}
+
+			&::after {
+				background-color: @base60;
+			}
+		}
+
+		&:disabled + label {
+			color: @base60;
+
+			&::before {
+				border-color: @base20;
+			}
+
+			&::after {
+				background-color: @base20;
+			}
+		}
+	}
+
+	.mk-keyboard input[type=radio]:focus + label::before {
+		outline-color: @base100;
+	}
+}

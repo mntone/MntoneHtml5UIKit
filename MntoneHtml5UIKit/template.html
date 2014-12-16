@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Anchor - Mntone HTML5 UIKit Testing Page</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<meta name="msapplication-tap-highlight" content="no">
+	<link rel="stylesheet/less" href="mnuik/less/uikit.less">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+	<style>
+		body {
+			padding: 20px;
+			color: #000;
+			background-color: #fff;
+		}
+
+		.description {
+			margin-bottom: 20px;
+			padding: 10px;
+			color: #fff;
+			background-color: #0078d7;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+		}
+
+		.description h1 {
+			font-size: 200%;
+			line-height: 1.667;
+			text-shadow: 0px 0px 10px #111;
+		}
+
+		.mk-seg {
+			display: -ms-flexbox;
+			display: -webkit-box;
+			display: flex;
+			margin: 0;
+			margin-left: 20px;
+			padding: 0;
+		}
+
+		.mk-seg > .mk-segitem {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			min-height: 32px;
+			min-width: 5em;
+			margin: 0 2px 0 0;
+			border: 1px solid transparent;
+			padding: 5px 5px 3px;
+			text-align: center;
+			color: #000;
+			background-color: rgba(0, 0, 0, .2);
+			font-weight: 700;
+		}
+
+		.mk-seg > .mk-segitem:hover {
+			border-color: rgba(0, 0, 0, .4);
+		}
+
+		.mk-seg > .mk-segitem:active {
+			background-color: rgba(0, 0, 0, .4);
+		}
+
+		.mk-seg > .mk-segitem-selected {
+			color: #fff;
+			background-color: rgba(0, 120, 215, .8);
+			border-color: transparent;
+		}
+
+		.mk-seg > .mk-segitem-selected:hover {
+			border-color: #0078d7;
+		}
+
+		.mk-seg > .mk-segitem-selected:active {
+			background-color: #0078d7;
+		}
+
+		.tab-content {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			overflow-y: auto;
+			height: 200px;
+			border: 1px solid rgba(0, 0, 0, .4);
+		}
+
+		.tab-content > textarea {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			border: 0;
+			font-family: Consolas, monospace;
+			color: #000;
+			background-color: #fff;
+		}
+
+		#content-result {
+			padding: 20px;
+			color: #fff;
+			background-color: #000;
+		}
+	</style>
+	<script src="app.js"></script>
+	<script>
+		window.onload = function ()
+		{
+			var menu1 = document.getElementById( "menu1" );
+			var segControl = new MNKit.UI.Seg( menu1 );
+		};
+	</script>
+</head>
+<body>
+	<div class="description">
+		<h1>Anchor</h1>
+		<p>This is simple hypertext.</p>
+	</div>
+
+	<div id="menu1">
+		<button data-mk-options="label: 'HTML'"></button>
+		<button data-mk-options="label: 'JavaScript'"></button>
+		<button data-mk-options="label: 'CSS'"></button>
+		<button data-mk-options="label: 'Result', selected: true"></button>
+	</div>
+
+	<div class="tab-content" id="content-html">
+		<textarea>
+&lt;h3&gt;A&lt;/h3&gt;
+&lt;a href="#" tabindex="0"&gt;sample text&lt;/a&gt;
+&lt;h3&gt;A[disabled]&lt;/h3&gt;
+&lt;a disabled tabindex="0"&gt;sample text&lt;/a&gt;
+		</textarea>
+	</div>
+
+	<div class="tab-content" id="content-js">
+		<textarea id="code-js">
+
+		</textarea>
+	</div>
+
+	<div class="tab-content" id="content-css">
+		<textarea id="code-css">
+
+		</textarea>
+	</div>
+
+	<div class="tab-content" id="content-result">
+		<h3>A</h3>
+		<a href="#" tabindex="0">sample text</a>
+
+		<h3>A[disabled]</h3>
+		<a disabled tabindex="0">sample text</a>
+	</div>
+</body>
+</html>

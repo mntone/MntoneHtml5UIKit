@@ -1,0 +1,92 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+@import "color-definitions.less";
+
+.checkbox-colors(@theme, @accent) {
+	.color-definitions(@theme, @accent);
+
+	input[type=checkbox] {
+		& + label {
+			&::before {
+				border-color: @base80;
+				background-color: transparent;
+			}
+
+			&::after {
+				border-color: transparent;
+			}
+		}
+
+		&:indeterminate + label {
+			&::before {
+				border-color: @accent100;
+			}
+
+			&::after {
+				border-color: @base80;
+			}
+		}
+
+		&:checked + label {
+			&::before {
+				border-color: transparent;
+				background-color: @accent100;
+			}
+
+			&::after {
+				border-color: @base100;
+			}
+		}
+
+		& + label:hover {
+			&::before {
+				border-color: @base100;
+			}
+		}
+
+		&:indeterminate + label:hover {
+			&::before {
+				border-color: @accent100;
+			}
+
+			&::after {
+				border-color: @base100;
+			}
+		}
+
+		&:active + label {
+			&::before {
+				border-color: transparent;
+				background-color: @base60;
+			}
+		}
+
+		&:indeterminate:active + label {
+			&::before {
+				border-color: @base80;
+				background-color: transparent;
+			}
+
+			&::after {
+				border-color: @base60;
+			}
+		}
+
+		&:disabled + label, &:indeterminate:disabled + label {
+			color: @base60;
+
+			&::before {
+				border-color: @base20;
+				background-color: transparent;
+			}
+
+			&::after {
+				border-color: @base20;
+			}
+		}
+	}
+
+	.mk-keyboard input[type=checkbox]:focus + label::before {
+		outline-color: @base100;
+	}
+}

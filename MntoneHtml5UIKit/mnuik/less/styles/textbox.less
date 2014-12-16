@@ -1,0 +1,29 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+@import "../mixins/basic.less";
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=url],
+input[type=search],
+textarea {
+	.box-sizing(border-box);
+	.background-clip(border-box);
+	min-height: 32px;
+	min-width: 100px;
+	outline: 0;
+	margin: 8px 0px;
+	border-width: 1px;
+	border-style: solid;
+	padding: 3px 6px 5px 10px;
+	-moz-user-select: text;
+	-ms-user-select: element;
+}
+
+textarea {
+	resize: none;
+	overflow-y: auto;
+}
