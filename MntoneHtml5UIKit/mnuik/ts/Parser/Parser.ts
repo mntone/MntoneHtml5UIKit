@@ -8,13 +8,13 @@ module MNKit.Parser
 	{
 		private _text: string;
 		private _tokens: TokenInfo[];
-		private _it: TokenIterator;
+		private _it: Iterator<TokenInfo>;
 
 		constructor( text: string )
 		{
 			this._text = text;
 			this._tokens = Lexer.lex( this._text );
-			this._it = new TokenIterator( this._tokens );
+			this._it = new Iterator<TokenInfo>( this._tokens );
 		}
 
 		parse(): any

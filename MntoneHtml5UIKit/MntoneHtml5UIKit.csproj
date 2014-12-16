@@ -55,6 +55,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="mnuik\ts\EventType.ts" />
     <TypeScriptCompile Include="mnuik\ts\Global.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Input\EventBase.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Input\Pointer.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\TokenIterator.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\StringIterator.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\Lexer.ts" />

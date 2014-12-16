@@ -4,12 +4,12 @@ module MNKit.Parser
 {
 	"use strict";
 
-	export class TokenIterator
+	export class Iterator<T>
 	{
-		private _source: TokenInfo[];
+		private _source: T[];
 		private _currentPosition: number;
 
-		constructor( source: TokenInfo[], position?: number )
+		constructor( source: T[], position?: number )
 		{
 			this._source = source;
 			this._currentPosition = position || -1;
@@ -31,12 +31,12 @@ module MNKit.Parser
 			this._currentPosition = -1;
 		}
 
-		clone(): TokenIterator
+		clone(): Iterator<T>
 		{
-			return new TokenIterator( this._source, this._currentPosition );
+			return new Iterator<T>( this._source, this._currentPosition );
 		}
 
-		get source(): TokenInfo[]
+		get source(): T[]
 		{
 			return this._source;
 		}
@@ -46,7 +46,7 @@ module MNKit.Parser
 			return this._currentPosition;
 		}
 
-		get current(): TokenInfo
+		get current(): T
 		{
 			return this._source[this._currentPosition];
 		}
