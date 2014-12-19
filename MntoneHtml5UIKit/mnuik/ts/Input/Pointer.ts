@@ -31,6 +31,10 @@ module MNKit.Input
 			this._sourceEventObject = eventObject;
 			Object.keys( overrideProperities ).forEach( key => Object.defineProperty( this, key, { value: overrideProperities[key] }) );
 		}
+		PointerEventProxy.prototype.preventDefault = function (): void
+		{
+			this._sourceEventObject.preventDefault();
+		};
 		[
 		// Event
 			"bubbles", "cancelable", "cancelBubble", "currentTarget", "defaultPrevented", "eventPhase", "isTrusted", "srcElement",
