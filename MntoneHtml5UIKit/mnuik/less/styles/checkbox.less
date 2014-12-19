@@ -13,11 +13,15 @@ input[type=checkbox] {
 		position: relative;
 		.box-sizing(border-box);
 		min-height: 32px;
-		margin-left: 4px;
 		padding: 5px 0 3px 32em / 15em;
 		line-height: 20em / 15em;
 		.user-select(none);
 		cursor: default;
+
+		.mk-touch-enabled & {
+			padding-top: 9px;
+			padding-bottom: 7px;
+		}
 
 		&::before, &::after {
 			content: "";

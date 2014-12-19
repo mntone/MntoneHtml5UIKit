@@ -3,7 +3,6 @@
 @import "../mixins/basic.less";
 
 button,
-button[type=submit],
 input[type=button],
 input[type=reset],
 input[type=submit] {
@@ -15,4 +14,8 @@ input[type=submit] {
 	border-style: solid;
 	padding: 4px 10px;
 	.user-select(none);
+
+	.mk-touch-enabled & {
+		min-height: 40px;
+	}
 }
