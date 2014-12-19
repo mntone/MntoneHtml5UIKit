@@ -57,12 +57,12 @@
     <TypeScriptCompile Include="mnuik\ts\Global.ts" />
     <TypeScriptCompile Include="mnuik\ts\Input\EventBase.ts" />
     <TypeScriptCompile Include="mnuik\ts\Input\Pointer.ts" />
-    <TypeScriptCompile Include="mnuik\ts\Parser\TokenIterator.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\StringIterator.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\Lexer.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\Parser.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\TokenInfo.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\TokenType.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Iterator.ts" />
     <TypeScriptCompile Include="mnuik\ts\UI\Command.ts" />
     <TypeScriptCompile Include="mnuik\ts\UI\Primitive\ControlListItemBase.ts" />
     <TypeScriptCompile Include="mnuik\ts\UI\Primitive\ControlListBase.ts" />
