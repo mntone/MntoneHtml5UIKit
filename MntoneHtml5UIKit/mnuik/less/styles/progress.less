@@ -2,7 +2,7 @@
 
 @import "../mixins/basic.less";
 
-@-webkit-keyframes mnuik-progress-indeterminate {
+@-webkit-keyframes mk-progress-indeterminate {
 	0% {
 		left: 0;
 		width: 25%;
@@ -29,7 +29,7 @@
 	}
 }
 
-@keyframes mnuik-progress-fade-out {
+@keyframes mk-progress-fade-out {
 	from {
 		opacity: 1.0;
 	}
@@ -48,21 +48,21 @@ progress {
 		border-style: none;
 	}
 
-	&.win-medium {
+	&.mk-medium {
 		width: 296px;
 	}
 
-	&.win-large {
+	&.mk-large {
 		width: 100%;
 	}
 
 	&:indeterminate::-webkit-progress-value {
 		position: relative;
-		-webkit-animation: mnuik-progress-indeterminate 3s linear infinite;
+		-webkit-animation: mk-progress-indeterminate 3s linear infinite;
 	}
 
 	&.win-paused:not(:indeterminate) {
-		animation-name: mnuik-progress-fade-out;
+		animation-name: mk-progress-fade-out;
 		animation-duration: 3s;
 		animation-timing-function: cubic-bezier(0.03, 0.76, 0.31, 1.0);
 		opacity: 0.5;

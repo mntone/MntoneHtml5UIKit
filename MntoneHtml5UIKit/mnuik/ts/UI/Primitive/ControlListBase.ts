@@ -13,7 +13,7 @@ module MNKit.UI.Primitive
 		{
 			super( element, options );
 
-			( <any>this.element ).mnParentElement = true;
+			( <any>this.element ).mkParentElement = true;
 
 			this._items = ControlBase.getChildElements( this ).map( e =>
 				ControlProcessor._processChildInternal( this, e, this.childDeclaration ) );
