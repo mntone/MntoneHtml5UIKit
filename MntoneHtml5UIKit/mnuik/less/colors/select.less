@@ -1,0 +1,41 @@
+﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
+
+.select-colors(@theme: dark, @accent: #0078d7) {
+	.color-definitions(@theme, @accent);
+
+	@selectArrowFillColor: @base100;
+	@selectDisabledArrowFillColor: @base20;
+	@arrowColor: ~`(function(v){return escape(v);})('@{selectArrowFillColor}')`;
+	@disabledArrowColor: ~`(function(v){return escape(v);})('@{selectDisabledArrowFillColor}')`;
+
+	select {
+		color: @base100;
+		background-color: @base20;
+		border-color: @base40;
+		background-image: url(~"data:image/svg+xml;charset=utf8,%3c%3fxml%20version%3d%221%2e0%22%3f%3e%0d%0a%3csvg%20xmlns%3d%22http%3a%2f%2fwww%2ew3%2eorg%2f2000%2fsvg%22%20version%3d%221%2e1%22%20width%3d%2212%22%20height%3d%2210%22%3e%3cg%20transform%3d%22translate%28%2d7%2e5%2c%2d5%2e53172%29%22%3e%3cpath%20d%3d%22M%2019%2e25%2c9%2e5771294%2013%2e5%2c15%2e327129%207%2e75%2c9%2e5771294%20l%200%2c%2d3%2e8408203%205%2e75%2c5%2e7499999%205%2e75%2c%2d5%2e7499999%20z%22%20fill%3d%22@{arrowColor}%22%2f%3e%3c%2fg%3e%3c%2fsvg%3e");
+
+		&:hover {
+			background-color: @base40;
+		}
+
+		&:disabled {
+			color: @base20;
+			background-color: @base20;
+			background-image: url(~"data:image/svg+xml;charset=utf8,%3c%3fxml%20version%3d%221%2e0%22%3f%3e%0d%0a%3csvg%20xmlns%3d%22http%3a%2f%2fwww%2ew3%2eorg%2f2000%2fsvg%22%20version%3d%221%2e1%22%20width%3d%2212%22%20height%3d%2210%22%3e%3cg%20transform%3d%22translate%28%2d7%2e5%2c%2d5%2e53172%29%22%3e%3cpath%20d%3d%22M%2019%2e25%2c9%2e5771294%2013%2e5%2c15%2e327129%207%2e75%2c9%2e5771294%20l%200%2c%2d3%2e8408203%205%2e75%2c5%2e7499999%205%2e75%2c%2d5%2e7499999%20z%22%20fill%3d%22@{disabledArrowColor}%22%2f%3e%3c%2fg%3e%3c%2fsvg%3e");
+		}
+	}
+
+	option {
+		color: @baseBlack;
+
+		&:checked {
+			color: @baseWhite;
+			background-color: @accent100;
+		}
+
+		&:hover, &:active {
+			color: @baseBlack;
+			background-color: fade(@baseBlack, 20%);
+		}
+	}
+}

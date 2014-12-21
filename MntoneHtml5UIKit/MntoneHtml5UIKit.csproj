@@ -38,12 +38,13 @@
     <Content Include="mnuik\less\styles\radio.less" />
     <Content Include="mnuik\less\colors\button.less" />
     <Content Include="mnuik\less\colors\checkbox.less" />
-    <Content Include="mnuik\less\colors\radio.less" />
+    <None Include="mnuik\less\colors\radio.less" />
     <Content Include="mnuik\less\colors\progress.less" />
     <Content Include="mnuik\less\styles\progress.less" />
     <Content Include="mnuik\less\styles\textbox.less" />
     <Content Include="mnuik\less\colors\textblock.less" />
     <Content Include="mnuik\less\mixins\flex.less" />
+    <Content Include="mnuik\less\styles\select.less" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

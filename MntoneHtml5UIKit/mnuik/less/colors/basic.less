@@ -1,11 +1,12 @@
 ﻿// Mntone HTML5 UIKit (MNKit) is under MIT license. Copyright (C) 2014 mntone
 
 @import "color-definitions.less";
+@import "textblock.less";
 @import "button.less";
 @import "checkbox.less";
 @import "radio.less";
+@import "select.less";
 @import "progress.less";
-@import "textblock.less";
 
 .colors(@theme: dark, @accent: #0078d7) {
 	.color-definitions(@theme, @accent);
@@ -40,66 +41,11 @@
 	label {
 		background-color: transparent; /* Firefox for Android */
 	}
-
+	
+	.text-colors(@theme, @accent);
 	.button-colors(@theme, @accent);
 	.checkbox-colors(@theme, @accent);
 	.radio-colors(@theme, @accent);
+	.select-colors(@theme, @accent);
 	.progress-colors(@theme, @accent);
-	.text-colors(@theme, @accent);
-
-	select {
-		color: @base100;
-		background-color: @base20;
-		border-color: @base40;
-
-		&::-ms-expand {
-			color: @base100;
-			background-color: transparent;
-		}
-
-		&:hover {
-			background-color: @base40;
-		}
-
-		&:disabled {
-			color: @base20;
-			background-color: @base20;
-
-			&::-ms-expand {
-				color: @base20;
-			}
-		}
-	}
-
-	option {
-		color: @baseBlack;
-
-		&:checked {
-			color: @baseWhite;
-			background-color: @accent100;
-		}
-
-		&:hover, &:active {
-			color: @baseBlack;
-			background-color: fade(@baseBlack, 20%);
-		}
-	}
-
-	select[multiple] {
-		border: none;
-		background-color: @chromeMedium;
-
-		option {
-			color: @base100;
-
-			&:hover {
-				color: @base100;
-			}
-
-			&:checked {
-				color: @baseWhite;
-				background-color: @accent;
-			}
-		}
-	}
 }
