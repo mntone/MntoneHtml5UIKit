@@ -157,7 +157,7 @@ module MNKit.Input
 			_translateMSPointerEvent( listener, e );
 		};
 		element.addEventListener( eventType.mspointer, msPointerWrapper, useCapture );
-		addEventListenerToEventMap( element, eventType.pointer, listener, useCapture, { mspointer: msPointerWrapper });
+		Core.EventUtilities.addEventListenerToEventMap( element, eventType.pointer, listener, useCapture, { mspointer: msPointerWrapper });
 	}
 
 	function _addPointerEventListenerForMouseTouch( element: HTMLElement, type: PointerEventType, listener: EventListener, useCapture?: boolean ): void
@@ -191,7 +191,7 @@ module MNKit.Input
 			};
 			element.addEventListener( eventType.touch, touchWrapper, useCapture );
 		}
-		addEventListenerToEventMap( element, eventType.pointer, listener, useCapture, { mouse: mouseWrapper, touch: touchWrapper });
+		Core.EventUtilities.addEventListenerToEventMap( element, eventType.pointer, listener, useCapture, { mouse: mouseWrapper, touch: touchWrapper });
 	}
 
 	declare function addPointerEventListener( element: HTMLElement, type: PointerEventType, listener: EventListener, useCapture?: boolean ): void;
@@ -209,7 +209,7 @@ module MNKit.Input
 		useCapture = useCapture || false;
 
 		var eventType = pointerEventTypeMap[type];
-		var map = getEventListenerFromEventMap( element, eventType.pointer, listener, useCapture );
+		var map = Core.EventUtilities.getEventListenerFromEventMap( element, eventType.pointer, listener, useCapture );
 		if( map )
 		{
 			if( map.data.mspointer )
@@ -224,7 +224,7 @@ module MNKit.Input
 		useCapture = useCapture || false;
 
 		var eventType = pointerEventTypeMap[type];
-		var map = getEventListenerFromEventMap( element, eventType.pointer, listener, useCapture );
+		var map = Core.EventUtilities.getEventListenerFromEventMap( element, eventType.pointer, listener, useCapture );
 		if( map )
 		{
 			if( map.data.mouse )

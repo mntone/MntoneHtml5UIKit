@@ -45,6 +45,7 @@
     <Content Include="mnuik\less\colors\textblock.less" />
     <Content Include="mnuik\less\mixins\flex.less" />
     <Content Include="mnuik\less\styles\select.less" />
+    <Content Include="mnuik\less\colors\select.less" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -54,9 +55,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <TypeScriptCompile Include="mnuik\ts\Collections\List.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Collections\ListBase.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Collections\ReadOnlyList.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Core\EventableBase.ts" />
     <TypeScriptCompile Include="mnuik\ts\EventType.ts" />
     <TypeScriptCompile Include="mnuik\ts\Global.ts" />
-    <TypeScriptCompile Include="mnuik\ts\Input\EventBase.ts" />
+    <TypeScriptCompile Include="mnuik\ts\Core\EventUtilities.ts" />
     <TypeScriptCompile Include="mnuik\ts\Input\Pointer.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\StringIterator.ts" />
     <TypeScriptCompile Include="mnuik\ts\Parser\Lexer.ts" />

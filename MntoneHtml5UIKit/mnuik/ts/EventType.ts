@@ -6,11 +6,6 @@ module MNKit
 
 	export module EventType
 	{
-		// page
-		export var Load = "load";
-		export var BeforeUnload = "beforeunload";
-		export var Unload = "unload";
-
 		// pointer
 		export var Click = "click";
 		export var ContextMenu = "contextmenu";
